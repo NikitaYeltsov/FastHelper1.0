@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #495057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contacts-container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #343a40;
+    margin-bottom: 30px;
+}
+
+.support-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.email-container {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.email-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+    word-break: break-word; /* Предотвращает выход длинной почты за границы */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.bottom-links button:hover {
+    background-color: #545b62;
+}
+
+.floating-figure {
+    position: fixed; /* Фиксированное положение относительно окна браузера */
+    background-color: rgba(0, 123, 255, 0.3); /* Пример цвета с небольшой прозрачностью */
+    border-radius: 50%; /* Круглая форма */
+    opacity: 0; /* Изначально невидимы */
+    animation-direction: alternate; /* Анимация в прямом и обратном направлении */
+    animation-iteration-count: infinite; /* Бесконечная анимация */
+    pointer-events: none; /* Не реагируют на клики */
+    z-index: 1; /* Чтобы фигуры были под контентом */
+}
+
+.figure-1 {
+    width: 50px;
+    height: 50px;
+    top: 15%;
+    left: 10%;
+    animation-name: float1;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.figure-2 {
+    width: 80px;
+    height: 80px;
+    top: 45%;
+    right: 15%;
+    background-color: rgba(255, 193, 7, 0.4); /* Другой цвет */
+    animation-name: float2;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.figure-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 30%;
+    background-color: rgba(40, 167, 69, 0.35); /* Еще один цвет */
+    animation-name: float3;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+@keyframes float1 {
+    0% { transform: translate(0, 0); opacity: 0.5; }
+    100% { transform: translate(50px, 30px); opacity: 0; }
+}
+
+@keyframes float2 {
+    0% { transform: translate(0, 0); opacity: 0; }
+    100% { transform: translate(-40px, -60px); opacity: 0.6; }
+}
+
+@keyframes float3 {
+    0% { transform: translate(0, 0); opacity: 0.7; }
+    100% { transform: translate(70px, -20px); opacity: 0.1; }
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #343a40; /* Темный фон */
+    color: #f8f9fa; /* Светлый текст */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    z-index: 20; /* Чтобы футер был поверх всего */
+}
